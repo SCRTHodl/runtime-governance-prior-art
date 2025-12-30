@@ -1,0 +1,36 @@
+# Authority Admission Layer
+
+This document operationalizes the authority principles described in paper.pdf.
+The paper is explanatory. This document is normative.
+
+## Invariant
+
+Authority must be admitted before any externally effective action or internal state mutation.
+
+No execution, tool use, external side effect, learning, or state change may occur unless authority has been explicitly admitted for the specific context, intent, and action.
+
+## Admission Requirements
+
+Authority admission is:
+
+- Explicit (never implicit, never inferred)
+- Scoped (context, intent, capability)
+- Time bounded (has an expiry)
+- Revocable (can be rescinded at any execution boundary)
+- Verifiable (absence of verifiable authority is disqualifying)
+
+Authority may be represented by receipts, tokens, signed assertions, or other verifiable artifacts. The representation is implementation defined.
+
+## Denial Rule
+
+If authority is absent, expired, revoked, or unverifiable, execution is denied.
+
+## Separation From Runtime Safety
+
+Runtime safety, monitoring, degradation, observability, and post hoc audit mechanisms operate only after authority has been granted.
+They do not substitute for authority admission.
+
+## Non enabling Notice
+
+This document is normative and non implementational.
+It describes constraints and expected behavior, not mechanisms, algorithms, key material, configuration, or system designs.
