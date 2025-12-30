@@ -1,0 +1,30 @@
+# Governance Continuity
+
+This document operationalizes the continuity principles described in paper.pdf and the associated provisional filings.
+The paper is explanatory. This document is normative.
+
+## Invariant
+
+Governance authority is independent of any specific model, toolchain, runtime, or vendor.
+
+## Continuity Guarantees
+
+Authority policies, admission rules, and revocation semantics persist across:
+
+- Model replacement
+- Toolchain changes
+- System migration
+- Runtime upgrades
+- Vendor substitution
+
+Execution substrates may change.
+Governance authority does not.
+
+## Conformance Requirement
+
+Any execution environment must prove conformance to the active governance ruleset prior to being granted authority to operate.
+
+## Non enabling Notice
+
+This document is normative and non implementational.
+It describes constraints and expected behavior, not mechanisms, algorithms, key material, configuration, or system designs.
